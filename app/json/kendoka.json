@@ -1,0 +1,10 @@
+{
+    "sensei": "Vince",
+    "kendoka": [
+        { "id": 0, "name": "Tame senpai", "level": 5, "experience": 1, "try": false },
+        { "id": 1, "name": "Grapes water", "level": 3, "experience": 12, "try": true },
+        { "id": 2, "name": "Kids", "level": 4, "experience": 12, "try": true },
+        { "id": 3, "name": "Banana", "level": 2, "experience": 10, "try": true },
+        { "id": 4, "name": "Young father", "level": 3, "experience": 1, "try": false }
+    ]
+}

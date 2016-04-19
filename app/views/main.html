@@ -11,4 +11,22 @@
   {{today}}
 </div>
 <div>poulet</div>
-<div><timer countdown="10041" max-time-unit="'minute'" interval="1000">{{mminutes}} minute{{minutesS}}, {{sseconds}} second{{secondsS}}</timer></div>
+<div style="font-size:18px;font-weight: bold;"><timer end-time="date">{{days/7 | number:0}} semaines</timer></div>
+<div><timer end-time="date">{{days}} jour{{daysS}} {{weeks}} {{hours}} heure{{hoursS}}, {{minutes}} minute{{minutesS}} {{seconds}} second{{secondsS}}.</timer></div>
+
+<hr/>
+<hr/>
+<hr/>
+
+<ul>
+  <li ng-repeat="kendoka in kendokas">
+    <a href="#/kendoka">{{kendoka.name}} + photo</a>
+    on hover, effect
+    on click, go to page précise
+  </li>
+</ul>
+
+en face
+image sensei
+on click : message aléatoire "hahaha"
+on hover : effect

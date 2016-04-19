@@ -16,7 +16,7 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'timer'
+      'timer'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -24,6 +24,14 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+        .when('/kendoka/', {
+            templateUrl: 'views/kendoka.html',
+            controller: 'UserCtrl'
+        })
+        .when('/sensei/', {
+            templateUrl: 'views/sensei.html',
+            controller: 'SupUserCtrl'
+        })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
