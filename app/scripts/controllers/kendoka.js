@@ -8,7 +8,7 @@
  * Controller of the debanamenApp
  */
 
-angular.module('debanamenApp').controller('UserCtrl', function ($scope, $http) {
+angular.module('debanamenApp').controller('UserCtrl', ['$scope', '$http', '$routeParams', '$location', function ($scope, $http, $routeParams, $location) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -17,5 +17,28 @@ angular.module('debanamenApp').controller('UserCtrl', function ($scope, $http) {
 
     $scope.test = "kendoka page .html";
 
+    $scope.characterId = $routeParams.characterId;
+    console.log($scope.characterId);
 
-});
+    $scope.character = {};
+
+    console.log("location");
+    console.log($location);
+    console.log($location.absUrl());
+    console.log($location.url());
+    console.log($location.path());
+
+    $http({
+        method:"GET",
+        url: "json/kendoka.json"
+    }).success(function successCallback(data){
+        $scope.character = data.kendoka[$scope.characterId];
+        console.log($scope.character);
+    }).then(function successCallback(response){
+
+    }, function errorCallback(response){
+
+    });
+
+
+}]);

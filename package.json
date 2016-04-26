@@ -1,7 +1,9 @@
 {
   "name": "debanamen",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  },
   "repository": {},
   "devDependencies": {
     "grunt": "^0.4.5",

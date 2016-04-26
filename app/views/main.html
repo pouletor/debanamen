@@ -1,26 +1,33 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+<div class="hp">
+  <div class="container">
+    <div class="intro-text">
+
+      <div class="intro-heading">
+        <timer end-time="main.date">{{days/7 | number:0}} semaines</timer>
+      </div>
+      <div class="intro-lead-in">
+        <timer end-time="main.date">{{days}} jour{{daysS}} <br/> {{weeks}} {{hours}} heure{{hoursS}} {{minutes}} minute{{minutesS}} {{seconds}} seconde{{secondsS}}</timer>
+      </div>
+      <a href="#about" class="btn btn-circle page-scroll">
+        <i class="fa fa-angle-double-down animated"></i>
+      </a>
+    </div>
+  </div>
 </div>
 
 <div>
-  {{today}}
+  today :
+  {{main.today}}
 </div>
-<div>poulet</div>
-<div style="font-size:18px;font-weight: bold;"><timer end-time="date">{{days/7 | number:0}} semaines</timer></div>
-<div><timer end-time="date">{{days}} jour{{daysS}} {{weeks}} {{hours}} heure{{hoursS}}, {{minutes}} minute{{minutesS}} {{seconds}} second{{secondsS}}.</timer></div>
+<div></div>
 
 <hr/>
 <hr/>
 <hr/>
 
-<ul>
-  <li ng-repeat="kendoka in kendokas">
-    <a href="#/kendoka">{{kendoka.name}} + photo</a>
+<ul class="characters">
+  <li ng-repeat="kendoka in main.kendokas">
+    <a ng-href="#/kendoka/{{kendoka.id}}">{{kendoka.name}} + photo</a>
     on hover, effect
     on click, go to page précise
   </li>

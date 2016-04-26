@@ -1,14 +1,12 @@
-<<<<<<< HEAD
-node_modules
-dist
 .tmp
 .sass-cache
-bower_components
-=======
 node_modules/
 bower_components/
 *.log
 
 build/
 dist/
->>>>>>> c6a7338b652e32079875a26910872f33fbab1c8c
+app/styles/startbootstrap-agency-1.0.6
+app/styles/startbootstrap-grayscale-1.0.6
+app/styles/agency
+.idea/

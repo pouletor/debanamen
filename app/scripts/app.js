@@ -16,25 +16,33 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-      'timer'
+    'timer'
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-        .when('/kendoka/', {
+        .when('/', {
+            templateUrl: 'views/main.html',
+            controller: 'MainCtrl',
+            controllerAs: 'main'
+        })
+        /*.when('/kendoka/', {
             templateUrl: 'views/kendoka.html',
             controller: 'UserCtrl'
+        })*/
+        .when('/kendoka/:characterId', {
+            templateUrl: 'views/kendoka.html',
+            controller: 'UserCtrl',
+            controllerAs: 'user'
         })
         .when('/sensei/', {
             templateUrl: 'views/sensei.html',
-            controller: 'SupUserCtrl'
+            controller: 'SupUserCtrl',
+            controllerAs: 'supUser'
         })
       .when('/about', {
         templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+        controller: 'AboutCtrl',
+          controllerAs: 'about'
       })
       .otherwise({
         redirectTo: '/'
