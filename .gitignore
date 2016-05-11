@@ -3,10 +3,11 @@
 node_modules/
 bower_components/
 *.log
+.idea/
+.idea/workspace.xml
 
 build/
 dist/
 app/styles/startbootstrap-agency-1.0.6
 app/styles/startbootstrap-grayscale-1.0.6
 app/styles/agency
-.idea/
